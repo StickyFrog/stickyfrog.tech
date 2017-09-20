@@ -1,0 +1,17 @@
+{
+  "name": "stickyfrog.tech",
+  "version": "0.0.1",
+  "description": "Sticky Frog website",
+  "main": "index.html",
+  "repository": "git@github.com:StickyFrog/stickyfrog.tech.git",
+  "author": "Crispin Merriman and Ian Kent",
+  "license": "MIT",
+  "scripts": {
+    "build:css": "node-sass src/main.scss dist/main.css",
+    "watch": "npm run watch:css",
+    "watch:css": "node-sass -w src/main.scss dist/main.css"
+  },
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  }
+}
