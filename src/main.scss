@@ -1,5 +1,6 @@
 $base-color: #000000;
 $secondary-color: #545454;
+$secondary-color-light: #696969;
 $base-background-color: #f9f9fb;
 $seconday-background-color: #f2b041;
 
@@ -7,11 +8,17 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: $base-background-color;
     color: $base-color;
-    margin: 0 1rem;
-    padding: 1rem 0 0 0;
+    margin: 0;
+    padding: 0;
+}
+
+main {
     max-width: 70rem;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
+    
+    &.js {
+        padding-top: 9rem;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,8 +27,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+h2 {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
 p {
-    margin: 0;
+    margin: 0 0 1rem 0;
     padding: 0;
 }
 
@@ -30,6 +43,13 @@ p {
     width: 8rem;
     background: $seconday-background-color;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
+    transition: transform 130ms ease-in;
+
+    &--smaller {
+        transform: scale(0.5);
+        will-change: transform;
+        transition: transform 50ms ease-out;
+    }
 
     &__image {
         display: block;
@@ -37,6 +57,13 @@ p {
         height: 3.5rem;
         margin-left: auto;
         margin-right: auto;
+        transition: transform 130ms ease-in;
+
+        &--smaller {
+            transform: scale(1.4) translateY(0.8rem);
+            will-change: transform;
+            transition: transform 0 ease-out;
+        }
     }
 
     &__text {
@@ -46,20 +73,59 @@ p {
         margin-left: auto;
         margin-right: auto;
         color: $base-color;
+        text-align: center;
+        transition: all 80ms ease-in;
+
+        &--smaller {
+            opacity: 0;
+            will-change: opacity;
+        }
     }
 }
 
 .nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    transition: transform 130ms ease-in;
+
+    &.js {
+        position: fixed;
+        width: 100%;
+        background-color: inherit;
+        z-index: 1;
+    }
+
+    &.scrolled {
+        -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+        -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+        box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    }
+
+    &--smaller {
+        transform: translateY(-4.5rem);
+        will-change: transform;
+        transition: transform 0 ease-out;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 1rem auto;
+        display: flex;
+        max-width: 70rem;
+
+        &--smaller {
+            transform: translateY(2.2rem);
+            will-change: transform;
+            transition: transform 0 ease-out;
+        }
+    }
 
     &__item {
         padding: 0;
         margin: 0;
         align-self: center;
         margin-left: 2rem;
+        font-size: 1.2rem;
+        transition: transform 130ms ease-in;
 
         &--home {
             flex: 1;
@@ -71,6 +137,7 @@ p {
     &__link {
         text-decoration: none;
         color: $secondary-color;
+        transition: transform 130ms ease-in;
 
         &:hover {
             color: $base-color;
@@ -93,6 +160,12 @@ p {
                 outline: 3px solid $base-color;
             }
         }
+
+        &--smaller {
+            transform: scale(0.5) translateX(-4.8rem);
+            will-change: transform;
+            transition: transform 80ms ease-out;
+        }
     }
 }
 
@@ -100,19 +173,69 @@ p {
     &-heading {
         font-size: 3rem;
         font-weight: bold;
-        padding-top: 1.5rem;
+        padding-top: 3rem;
         padding-bottom: 0;
         line-height: 4rem;
+        width: 75%;
     }
     &-subheading {
         font-size: 2rem;
         padding-top: 0;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
         margin: 0;
+        width: 75%;
     }
 }
 
 .visuallyhidden {
     position: fixed;
     left: -99999px;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        background-color: $secondary-color;
+        width: 30%;
+        color: #ffffff;
+        margin-bottom: 2rem;
+    }
+
+    &__heading {
+        font-family: 'Open Sans', sans-serif;
+        padding: 1rem;
+        flex: 0 0 auto;
+    }
+
+    &__body {
+        background-color: $secondary-color-light;
+        padding: 1rem;
+        flex: 1 1 auto;
+    }
+
+    &__link {
+        color: #ffffff;
+        padding: 1rem;
+        flex: 0 0 auto;
+        display: block;
+        position: relative;
+
+        &:hover {
+            color: #ffffff;
+        }
+
+        &:focus {
+            outline: 3px solid $seconday-background-color;
+        }
+    }
+
+    &__link-icon {
+        position: absolute;
+        top: 1.2rem;
+        right: 1rem;
+    }
 }
