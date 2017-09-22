@@ -81,11 +81,12 @@ p {
     padding: 0;
     margin: 1rem auto;
     display: flex;
-    max-width: 70rem; }
+    max-width: 70rem;
+    transition: transform 130ms ease-in; }
     .nav__list--smaller {
       transform: translateY(2.2rem);
       will-change: transform;
-      transition: transform 0 ease-out; }
+      transition: transform 50ms ease-out; }
   .nav__item {
     padding: 0;
     margin: 0;
