@@ -5,6 +5,8 @@ $base-background-color: #f9f9fb;
 $seconday-background-color: #f2b041;
 
 body {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
     font-family: 'Open Sans', sans-serif;
     background-color: $base-background-color;
     color: $base-color;
