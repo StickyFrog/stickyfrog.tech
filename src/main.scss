@@ -2,7 +2,9 @@ $base-color: #000000;
 $secondary-color: #545454;
 $secondary-color-light: #696969;
 $base-background-color: #f9f9fb;
-$seconday-background-color: #f2b041;
+$primary-highlight-color: #f2b041;
+$secondary-highlight-color: #52A573;
+$link-color: #1A6AA4;
 
 body {
     -webkit-font-smoothing: antialiased;
@@ -29,6 +31,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+h1 {
+    font-size: 2.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
 h2 {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
@@ -40,10 +48,18 @@ p {
     padding: 0;
 }
 
+a {
+    color: $link-color;
+
+    &:focus {
+        outline: 3px solid $primary-highlight-color;
+    }
+}
+
 .logo {
     display: block;
     width: 8rem;
-    background: $seconday-background-color;
+    background: $primary-highlight-color;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
     transition: transform 130ms ease-in;
 
@@ -143,12 +159,16 @@ p {
         transition: transform 130ms ease-in;
 
         &:hover {
-            color: $base-color;
-            font-weight: bold;           
+            color: $base-color;         
         }
 
         &:focus {
-            outline: 3px solid $seconday-background-color;
+            outline: 3px solid $primary-highlight-color;
+        }
+
+        &--active {
+            color: $base-color;
+            font-weight: bold;
         }
 
         &--home {
@@ -232,7 +252,7 @@ p {
         }
 
         &:focus {
-            outline: 3px solid $seconday-background-color;
+            outline: 3px solid $primary-highlight-color;
         }
     }
 
@@ -240,5 +260,35 @@ p {
         position: absolute;
         top: 1.2rem;
         right: 1rem;
+    }
+}
+
+.blog-post {
+    margin-bottom: 3rem;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: -1rem;
+        height: 1px;
+        background-color: #cfcfcf;
+        width: 100%;
+        left: 0;
+    }
+
+    &__heading {
+        margin-bottom: 0;
+    }
+
+    &__date {
+        font-size: 1rem;
+        color: $secondary-color;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+
+    &__link {
+        padding-bottom: 1rem;
     }
 }

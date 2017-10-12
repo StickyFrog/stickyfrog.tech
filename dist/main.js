@@ -10,23 +10,21 @@ enhancedElements.forEach(function (element) {
 
 window.addEventListener('scroll', function (event) {
     var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollPosition > 10 && !header.classList.contains("scrolled")) {
+    if (scrollPosition > 50 && !header.classList.contains("scrolled")) {
         console.log('Add classes');
         header.classList.add("scrolled", "nav--smaller");
         header.querySelector('.nav__list').classList.add("nav__list--smaller");
         header.querySelector('.nav__link--home').classList.add("nav__link--smaller");
-        // header.querySelector('.logo').classList.add('logo--smaller');
         header.querySelector('.logo__text').classList.add('logo__text--smaller');
         header.querySelector('.logo__image').classList.add('logo__image--smaller');
         return;
     }
 
-    if (header.classList.contains("scrolled") && scrollPosition < 10) {
+    if (header.classList.contains("scrolled") && scrollPosition < 50) {
         console.log('Remove classes');
         header.classList.remove("scrolled", "nav--smaller");
         header.querySelector('.nav__list').classList.remove("nav__list--smaller");
         header.querySelector('.nav__link--home').classList.remove("nav__link--smaller");
-        // header.querySelector('.logo').classList.remove('logo--smaller');
         header.querySelector('.logo__text').classList.remove('logo__text--smaller');
         header.querySelector('.logo__image').classList.remove('logo__image--smaller');
     }
