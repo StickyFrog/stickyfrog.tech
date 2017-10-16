@@ -1,0 +1,29 @@
+.blog-post {
+    margin-bottom: 3rem;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: -1rem;
+        height: 1px;
+        background-color: #cfcfcf;
+        width: 100%;
+        left: 0;
+    }
+
+    &__heading {
+        margin-bottom: 0;
+    }
+
+    &__date {
+        font-size: 1rem;
+        color: $secondary-color;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+
+    &__link {
+        padding-bottom: 1rem;
+    }
+}

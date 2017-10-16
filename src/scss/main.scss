@@ -1,0 +1,16 @@
+$base-color: #000000;
+$secondary-color: #545454;
+$secondary-color-light: #696969;
+$base-background-color: #f9f9fb;
+$primary-highlight-color: #f2b041;
+$secondary-highlight-color: #52A573;
+$link-color: #1A6AA4;
+
+@import "grid";
+@import "base";
+@import "nav";
+@import "logo";
+@import "homepage";
+@import "blog";
+@import "utilities";
+

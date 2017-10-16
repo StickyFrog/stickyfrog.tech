@@ -9,10 +9,10 @@
   "scripts": {
     "build": "npm run build:js & npm run build:css",
     "build:js": "babel src/main.js --out-file dist/main.js",
-    "build:css": "node-sass src/main.scss dist/main.css",
+    "build:css": "node-sass src/scss/main.scss dist/main.css",
     "watch": "npm run watch:css & npm run watch:js",
     "watch:js": "babel src/main.js --watch --out-file dist/main.js",
-    "watch:css": "node-sass -w src/main.scss dist/main.css"
+    "watch:css": "node-sass -w src/scss/main.scss dist/main.css"
   },
   "dependencies": {
     "node-sass": "^4.5.3"

@@ -1,0 +1,53 @@
+html, body {
+    // font-size: 16px;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    font-family: 'Open Sans', sans-serif;
+    background-color: $base-background-color;
+    color: $base-color;
+    margin: 0 $column-gutter;
+    padding: 0;
+}
+
+main {
+    max-width: 70rem;
+    margin: 0 auto;
+    
+    &.js {
+        padding-top: 9rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Martel Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+p {
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+a {
+    color: $link-color;
+
+    &:focus {
+        outline: 3px solid $primary-highlight-color;
+    }
+}

@@ -1,0 +1,44 @@
+.logo {
+    display: block;
+    width: 9rem;
+    background: $primary-highlight-color;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    transition: transform 130ms ease-in;
+
+    &--smaller {
+        transform: scale(0.5);
+        will-change: transform;
+        transition: transform 50ms ease-out;
+    }
+
+    &__image {
+        display: block;
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        transition: transform 130ms ease-in;
+
+        &--smaller {
+            transform: scale(1.4) translateY(0.8rem);
+            will-change: transform;
+            transition: transform 0 ease-out;
+        }
+    }
+
+    &__text {
+        font-family: 'Martel Sans', sans-serif;
+        display: block;
+        font-size: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        color: $base-color;
+        text-align: center;
+        transition: all 80ms ease-in;
+
+        &--smaller {
+            opacity: 0;
+            will-change: opacity;
+        }
+    }
+}

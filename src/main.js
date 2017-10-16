@@ -9,7 +9,6 @@ enhancedElements.forEach(element => {
 window.addEventListener('scroll', event => {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollPosition > 50 && !header.classList.contains("scrolled")) {
-        console.log('Add classes');
         header.classList.add("scrolled", "nav--smaller");
         header.querySelector('.nav__list').classList.add("nav__list--smaller");
         header.querySelector('.nav__link--home').classList.add("nav__link--smaller");
@@ -19,7 +18,6 @@ window.addEventListener('scroll', event => {
     }
 
     if (header.classList.contains("scrolled") && scrollPosition < 50) {
-        console.log('Remove classes');
         header.classList.remove("scrolled", "nav--smaller");
         header.querySelector('.nav__list').classList.remove("nav__list--smaller");
         header.querySelector('.nav__link--home').classList.remove("nav__link--smaller");
