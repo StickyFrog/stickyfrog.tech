@@ -10,11 +10,12 @@
     transform: translateX(105%);
     background-color: $secondary-color-light;
     height: 100%;
-    width: 100%;
+    width: 90%;
     font-size: 1.5rem;
     z-index: 1;
     will-change: transform;
     transition: transform 150ms ease-out;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 
     &:target {
         transform: translateX(0);
