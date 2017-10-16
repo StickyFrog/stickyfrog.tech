@@ -249,6 +249,7 @@ a {
       margin-left: 0;
       display: inline-block; }
     .nav__item--menu {
+      display: none;
       font-size: 1.5rem;
       text-decoration: underline; }
       @media (max-width: 50em) {
