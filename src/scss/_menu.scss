@@ -1,0 +1,56 @@
+.menu {
+    display: none;
+    position: fixed;
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-right: $column-gutter;
+    padding-left: $column-gutter;
+    top: 0;
+    right: 0;
+    transform: translateX(105%);
+    background-color: $secondary-color-light;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    z-index: 1;
+    will-change: transform;
+    transition: transform 150ms ease-out;
+
+    &:target {
+        transform: translateX(0);
+        transition: transform 130ms ease-out;
+    }
+
+    @media (min-width: $device-sm) {
+        width: 70%;
+    }
+
+    @media (max-width: $device-md) {
+        display: block;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        display: block;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    &__close {
+        color: #ffffff;
+        display: block;
+        float: right;
+        text-decoration: underline;
+        margin-bottom: 2rem;
+    }
+}

@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 html, body {
-  font-size: 14px; }
+  font-size: 15px; }
 
 .container {
   margin: 0 auto;
@@ -33,6 +33,9 @@ html, body {
 [class*="col"] {
   width: 100%;
   padding: 0 0.7rem; }
+  @media (max-width: 50em) {
+    [class*="col"] {
+      padding-bottom: 1rem; } }
 
 .col-xs-1 {
   flex-basis: 8.33333%;
@@ -84,7 +87,7 @@ html, body {
 
 @media (min-width: 30em) {
   html, body {
-    font-size: 14px; }
+    font-size: 16px; }
   .col-sm-1 {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
@@ -208,11 +211,9 @@ a {
     width: 100%;
     background-color: inherit;
     left: 0;
-    z-index: 1; }
-    @media (min-width: 50em) {
-      .nav.js {
-        padding-right: 1.4rem;
-        padding-left: 1.4rem; } }
+    z-index: 1;
+    padding-right: 1.4rem;
+    padding-left: 1.4rem; }
   .nav.scrolled {
     -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
     -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
@@ -239,10 +240,20 @@ a {
     margin-left: 2rem;
     font-size: 1.2rem;
     transition: transform 130ms ease-in; }
+    @media (max-width: 50em) {
+      .nav__item {
+        display: none; } }
     .nav__item--home {
       flex: 1;
-      width: 8rem;
-      margin-left: 0; }
+      width: 9rem;
+      margin-left: 0;
+      display: inline-block; }
+    .nav__item--menu {
+      font-size: 1.5rem;
+      text-decoration: underline; }
+      @media (max-width: 50em) {
+        .nav__item--menu {
+          display: block; } }
   .nav__link {
     text-decoration: none;
     color: #545454;
@@ -314,39 +325,40 @@ a {
   padding-bottom: 2.5rem;
   margin: 0; }
 
-.blog-posts__item {
-  display: flex;
-  flex-direction: column;
-  background-color: #545454;
-  height: 100%;
-  color: #ffffff;
+.blog-posts {
   margin-bottom: 2rem; }
-
-.blog-posts__heading {
-  font-family: 'Open Sans', sans-serif;
-  padding: 1rem;
-  flex: 0 0 auto; }
-
-.blog-posts__body {
-  background-color: #696969;
-  padding: 1rem;
-  flex: 1 1 auto; }
-
-.blog-posts__link {
-  color: #ffffff;
-  padding: 1rem;
-  flex: 0 0 auto;
-  display: block;
-  position: relative; }
-  .blog-posts__link:hover {
-    color: #ffffff; }
-  .blog-posts__link:focus {
-    outline: 3px solid #f2b041; }
-
-.blog-posts__link-icon {
-  position: absolute;
-  top: 1.2rem;
-  right: 1rem; }
+  @media (max-width: 30em) {
+    .blog-posts {
+      margin-bottom: 1.5rem; } }
+  .blog-posts__item {
+    display: flex;
+    flex-direction: column;
+    background-color: #545454;
+    height: 100%;
+    color: #ffffff;
+    margin-bottom: 2rem; }
+  .blog-posts__heading {
+    font-family: 'Open Sans', sans-serif;
+    padding: 1rem;
+    flex: 0 0 auto; }
+  .blog-posts__body {
+    background-color: #696969;
+    padding: 1rem;
+    flex: 1 1 auto; }
+  .blog-posts__link {
+    color: #ffffff;
+    padding: 1rem;
+    flex: 0 0 auto;
+    display: block;
+    position: relative; }
+    .blog-posts__link:hover {
+      color: #ffffff; }
+    .blog-posts__link:focus {
+      outline: 3px solid #f2b041; }
+  .blog-posts__link-icon {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem; }
 
 .blog-post {
   margin-bottom: 3rem;
@@ -360,6 +372,7 @@ a {
     width: 100%;
     left: 0; }
   .blog-post__heading {
+    margin-top: 0;
     margin-bottom: 0; }
   .blog-post__date {
     font-size: 1rem;
@@ -372,3 +385,47 @@ a {
 .visuallyhidden {
   position: fixed;
   left: -99999px; }
+
+.menu {
+  display: none;
+  position: fixed;
+  margin-top: 0;
+  padding-top: 1rem;
+  padding-right: 1.4rem;
+  padding-left: 1.4rem;
+  top: 0;
+  right: 0;
+  transform: translateX(105%);
+  background-color: #696969;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  z-index: 1;
+  will-change: transform;
+  transition: transform 150ms ease-out; }
+  .menu:target {
+    transform: translateX(0);
+    transition: transform 130ms ease-out; }
+  @media (min-width: 30em) {
+    .menu {
+      width: 70%; } }
+  @media (max-width: 50em) {
+    .menu {
+      display: block; } }
+  .menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .menu__item {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .menu__link {
+    color: #ffffff;
+    text-decoration: none; }
+  .menu__close {
+    color: #ffffff;
+    display: block;
+    float: right;
+    text-decoration: underline;
+    margin-bottom: 2rem; }
