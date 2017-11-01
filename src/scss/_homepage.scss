@@ -1,4 +1,8 @@
 .home {
+    &-heading-group {
+        border-bottom: 5px solid $secondary-highlight-color;
+        margin-bottom: 3rem;
+    }
     &-heading {
         font-size: 3rem;
         font-weight: bold;

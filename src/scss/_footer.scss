@@ -1,0 +1,12 @@
+.footer {
+    background-color: $secondary-color-light;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+
+    &__container {
+        max-width: 70rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,20 @@
+.details-list {
+
+    &__group {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    &__title {
+        display: inline-block;
+    }
+
+    &__description {
+        margin: 0;
+        display: inline-block;
+        
+        a {
+            color: #fff;
+        }
+    }
+}

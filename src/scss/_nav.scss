@@ -7,8 +7,6 @@
         background-color: inherit;
         left: 0;
         z-index: 1;
-        padding-right: $column-gutter;
-        padding-left: $column-gutter;
     }
 
     &.scrolled {
@@ -25,7 +23,7 @@
 
     &__list {
         list-style: none;
-        padding: 0;
+        padding: 0 1rem;
         margin: 1rem auto;
         display: flex;
         max-width: 70rem;
