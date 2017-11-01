@@ -1,9 +1,6 @@
 *, *:after, *:before {
   box-sizing: border-box; }
 
-html, body {
-  font-size: 15px; }
-
 .container {
   margin: 0 auto;
   padding: 0 1.4rem;
@@ -165,6 +162,12 @@ html, body {
     flex-basis: 100%;
     max-width: 100%; } }
 
+html, body {
+  font-size: 16px; }
+  @media (max-width: 30em) {
+    html, body {
+      font-size: 14px; } }
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -321,7 +324,7 @@ a {
   line-height: 4rem; }
 
 .home-subheading {
-  font-size: 2rem;
+  font-size: 2.3rem;
   padding-top: 0;
   padding-bottom: 2.5rem;
   margin: 0; }
