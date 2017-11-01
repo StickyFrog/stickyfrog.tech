@@ -387,6 +387,10 @@ a {
   position: fixed;
   left: -99999px; }
 
+.noscroll {
+  overflow: hidden;
+  position: fixed; }
+
 .menu {
   display: none;
   position: fixed;
@@ -401,7 +405,7 @@ a {
   height: 100%;
   width: 90%;
   font-size: 1.5rem;
-  z-index: 1;
+  z-index: 2;
   will-change: transform;
   transition: transform 150ms ease-out;
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3); }

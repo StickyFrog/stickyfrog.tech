@@ -1,5 +1,6 @@
 'use strict';
 
+// Enhance header nav to stick and shrink on scroll
 var enhancedElements = document.querySelectorAll('.no-js');
 var header = document.getElementById('nav');
 
@@ -26,4 +27,13 @@ window.addEventListener('scroll', function (event) {
         header.querySelector('.logo__text').classList.remove('logo__text--smaller');
         header.querySelector('.logo__image').classList.remove('logo__image--smaller');
     }
+});
+
+// Disable body scroll when mobile menu is open
+var body = document.querySelector('body');
+document.querySelector('a[href="#menu"]').addEventListener('click', function () {
+    body.classList.add("noscroll");
+});
+document.querySelector('a[href="#"]').addEventListener('click', function () {
+    body.classList.remove("noscroll");
 });
