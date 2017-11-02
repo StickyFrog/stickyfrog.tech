@@ -2,6 +2,8 @@
 const enhancedElements = document.querySelectorAll('.no-js');
 const header = document.getElementById('nav');
 
+let scrolled = false;
+
 enhancedElements.forEach(element => {
     element.classList.remove("no-js");
     element.classList.add("js");
@@ -9,7 +11,8 @@ enhancedElements.forEach(element => {
 
 window.addEventListener('scroll', event => {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollPosition > 50 && !header.classList.contains("scrolled")) {
+    if (scrollPosition > 50 && !scrolled) {
+        scrolled = true;
         header.classList.add("scrolled", "nav--smaller");
         header.querySelector('.nav__list').classList.add("nav__list--smaller");
         header.querySelector('.nav__link--home').classList.add("nav__link--smaller");
@@ -18,7 +21,8 @@ window.addEventListener('scroll', event => {
         return;
     }
 
-    if (header.classList.contains("scrolled") && scrollPosition < 50) {
+    if (scrolled && scrollPosition < 50) {
+        scrolled = false;
         header.classList.remove("scrolled", "nav--smaller");
         header.querySelector('.nav__list').classList.remove("nav__list--smaller");
         header.querySelector('.nav__link--home').classList.remove("nav__link--smaller");
