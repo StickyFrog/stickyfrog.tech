@@ -235,7 +235,7 @@ a {
   .nav--smaller {
     transform: translateY(-4.5rem);
     will-change: transform;
-    transition: transform 0 ease-out; }
+    transition: transform 100ms ease-out; }
   .nav__list {
     list-style: none;
     padding: 0 1rem;
@@ -246,7 +246,7 @@ a {
     .nav__list--smaller {
       transform: translateY(2.2rem);
       will-change: transform;
-      transition: transform 50ms ease-out; }
+      transition: transform 100ms ease-out; }
   .nav__item {
     padding: 0;
     margin: 0;
@@ -291,7 +291,7 @@ a {
     .nav__link--smaller {
       transform: scale(0.5) translateX(-4.8rem);
       will-change: transform;
-      transition: transform 80ms ease-out; }
+      transition: transform 130ms ease-out; }
 
 .logo {
   display: block;
@@ -302,7 +302,7 @@ a {
   .logo--smaller {
     transform: scale(0.5);
     will-change: transform;
-    transition: transform 50ms ease-out; }
+    transition: transform 100ms ease-out; }
   .logo__image {
     display: block;
     width: 3.5rem;

@@ -18,7 +18,7 @@
     &--smaller {
         transform: translateY(-4.5rem);
         will-change: transform;
-        transition: transform 0 ease-out;
+        transition: transform 100ms ease-out;
     }
 
     &__list {
@@ -32,7 +32,7 @@
         &--smaller {
             transform: translateY(2.2rem);
             will-change: transform;
-            transition: transform 50ms ease-out;
+            transition: transform 100ms ease-out;
         }
     }
 
@@ -100,7 +100,7 @@
         &--smaller {
             transform: scale(0.5) translateX(-4.8rem);
             will-change: transform;
-            transition: transform 80ms ease-out;
+            transition: transform 130ms ease-out;
         }
     }
 
