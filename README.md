@@ -1,6 +1,6 @@
 # stickyfrog.tech
 
-The codebase the [stickyfrog.tech](https://www.stickyfrog.tech).
+The codebase the [stickyfrog.tech](https://stickyfrog.tech).
 
 Consists of a simple static website, made up on HTML, CSS and some minor progressive enhancement with Javascript.
 
