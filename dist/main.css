@@ -220,6 +220,14 @@ a {
   a:focus {
     outline: 3px solid #f2b041; }
 
+:target:before {
+  content: "";
+  display: block;
+  height: 7rem;
+  /* fixed header height*/
+  margin: -7rem 0 0;
+  /* negative fixed header height */ }
+
 .nav {
   transition: transform 130ms ease-in; }
   .nav.js {
