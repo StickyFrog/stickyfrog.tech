@@ -71,3 +71,10 @@ a {
         outline: 3px solid $primary-highlight-color;
     }
 }
+
+:target:before {
+  content: "";
+  display: block;
+  height: 7rem; /* fixed header height*/
+  margin: -7rem 0 0; /* negative fixed header height */
+}
