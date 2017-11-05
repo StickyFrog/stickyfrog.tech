@@ -38,6 +38,8 @@ var body = document.querySelector('body');
 document.querySelector('a[href="#menu"]').addEventListener('click', function () {
     body.classList.add("noscroll");
 });
-document.querySelector('a[href="#"]').addEventListener('click', function () {
-    body.classList.remove("noscroll");
+document.querySelectorAll('a[href="#"], .menu__link').forEach(function (link) {
+    link.addEventListener('click', function () {
+        body.classList.remove("noscroll");
+    });
 });
