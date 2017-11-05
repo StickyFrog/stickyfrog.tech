@@ -38,6 +38,28 @@ const body = document.querySelector('body');
 document.querySelector('a[href="#menu"]').addEventListener('click', function() {
     body.classList.add("noscroll");
 });
-document.querySelector('a[href="#"]').addEventListener('click', function() {
-    body.classList.remove("noscroll");
+document.querySelectorAll('.menu__link, .menu__close').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        body.classList.remove("noscroll");
+    });
 });
+
+// On click of a hash path move the page further down - to take into account the sticky header
+window.onhashchange = function(event) {
+    console.log(event);
+    console.log(body.scrollTop);
+}
+// const hashLinks = document.querySelectorAll('a[href^="#"]');
+// const headerHeight = 156;
+// hashLinks.forEach(function(link) {
+//     // if (link.getAttribute('href') === "#") {
+//     //     return;
+//     // }
+//     // const targetPosition = document.querySelector(link.getAttribute("href")).getBoundingClientRect().top;
+//     link.addEventListener('click', function(event) {
+//         // event.preventDefault();
+//         // history.pushState({}, "sticky frog", link.getAttribute('href'));
+//         console.log(document.querySelector('html').scrollTop);
+//         window.scroll(null, body.scrollTop + headerHeight);
+//     });
+// });
