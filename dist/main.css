@@ -345,12 +345,18 @@ a {
   padding-top: 2rem;
   padding-bottom: 0;
   line-height: 4rem; }
+  @media (max-width: 30em) {
+    .home-heading {
+      font-size: 2.8rem; } }
 
 .home-subheading {
   font-size: 2.3rem;
   padding-top: 0;
   padding-bottom: 4rem;
   margin: 0; }
+  @media (max-width: 30em) {
+    .home-subheading {
+      font-size: 2rem; } }
 
 .blog-posts {
   margin-bottom: 2rem; }
