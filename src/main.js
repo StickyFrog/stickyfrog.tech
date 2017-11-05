@@ -35,11 +35,18 @@ window.addEventListener('scroll', event => {
 
 // Disable body scroll when mobile menu is open
 const body = document.querySelector('body');
+const menuControls = document.querySelectorAll('.nav__link--menu, .menu__close');
 document.querySelector('a[href="#menu"]').addEventListener('click', function() {
     body.classList.add("noscroll");
+    menuControls.forEach(function(control) {
+        control.setAttribute("aria-expanded", true);
+    });
 });
 document.querySelectorAll('a[href="#"], .menu__link').forEach(function(link) {
     link.addEventListener('click', function() {
+        menuControls.forEach(function(control) {
+            control.setAttribute("aria-expanded", false);
+        });
         body.classList.remove("noscroll");
     });
 });
