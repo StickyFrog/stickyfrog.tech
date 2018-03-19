@@ -477,6 +477,8 @@ a {
   color: #fff;
   padding-top: 1rem;
   padding-bottom: 1.5rem; }
+  .footer h2, .footer h3, .footer h4 {
+    color: #fff; }
   .footer__container {
     max-width: 70rem;
     margin-right: auto;
